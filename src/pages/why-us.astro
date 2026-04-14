@@ -1,0 +1,25 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import WhyUsPage from "@/views/WhyUs";
+import { getBreadcrumbSchema, getPageSchema, SITE_URL } from "@/lib/seo";
+
+const title = "Why Choose Queen Safety Nets In Chennai";
+const description =
+  "Learn about Queen Safety Nets, our installation quality, materials, service coverage across Chennai, and why customers trust our safety net solutions.";
+const path = "/why-us/";
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonicalPath={path}
+  schema={[
+    getPageSchema(`${SITE_URL}${path}`, title, description),
+    getBreadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "Why Us", path },
+    ]),
+  ]}
+>
+  <WhyUsPage client:load />
+</BaseLayout>
