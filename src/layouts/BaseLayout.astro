@@ -61,6 +61,14 @@ const schemaList = [getLocalBusinessSchema(), ...(schema ? (Array.isArray(schema
       <script type="application/ld+json" set:html={JSON.stringify(item)} />
     ))}
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18131797830"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18131797830');
+    </script>
   </head>
   <body>
     <slot />
